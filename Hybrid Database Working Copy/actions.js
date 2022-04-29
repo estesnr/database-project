@@ -2,6 +2,7 @@ const tabs = document.querySelectorAll('[data-tab-value]')
 const tabInfos = document.querySelectorAll('[data-tab-info]')
 document.querySelector('#newEntrySubmit').addEventListener("click", createEntry)
 
+// function to cycle through tabs
 tabs.forEach(tab => {
     tab.addEventListener('click', () => {
         const target = document
@@ -14,27 +15,23 @@ tabs.forEach(tab => {
     })
 })
 
+// object constructor for new entries
 function CreateEntry(devType, calStick, destination, date, engName) {
-        this.devType = document.querySelector('#devTypeInput').value;
-        this.calStick = document.querySelector('#calStickInput').value;
-        this.destination = document.querySelector('#destinationInput').value;
-        this.date = document.querySelector('#dateInput').value;
-        this.engName = document.querySelector('#nameInput').value;
+        this.devType = devType
+        this.calStick = calStick
+        this.destination = destination
+        this.date = date
+        this.engName = engName
     }
 
+// function that gathers inputs from the "New Entry" tab to create a new object
 function createEntry() {
-    let newEntry = new CreateEntry();
+    let newEntry = new CreateEntry(
+        document.querySelector('#devTypeInput').value,
+        document.querySelector('#calStickInput').value,
+        document.querySelector('#destinationInput').value,
+        document.querySelector('#dateInput').value,
+        document.querySelector('#nameInput').value
+    );
     console.log(newEntry)
 }
-// let arrayValues = []
-// function newEntry() {
-//     let input = document.getElementsByName('array[]');
-    
-//     for (var i = 0; i < input.length; i++) {
-//         let a = input[i];
-//         arrayValues = arrayValues + "array[" + i + "].value = " + a.value + " "
-//     }
-
-//     // alert(arrayValues);
-    
-// }
