@@ -56,9 +56,9 @@
         </div>
         <div class="tabs__tab" id="tab_4" data-tab-info>
             <h3>New Entry</h3>
-            <form action="">
+            <!-- <form action=""> -->
                 <label for="devType">Device Type</label><br />
-                <select name="array[]">
+                <select name="array[]" id="devTypeInput">
                     <option>Oscilloscope</option>
                     <option>Differential Probe</option>
                     <option>Current Transducer</option>
@@ -67,12 +67,14 @@
                     <option>Power Supply</option>
                     <option>Waveform Generator</option>
                 </select><br />
-                <input type="text" name="array[]" placeholder="Cal Sticker Number"><br />
-                <input type="text" name="array[]" placeholder="Destination"><br />
-                <input type="text" name="array[]" placeholder="Date"><br /> 
-                <input type="text" name="array[]" placeholder="Name"><br />
+                <input type="text" name="array[]" placeholder="Cal Sticker Number" id="calStickInput"><br />
+                <input type="text" name="array[]" placeholder="Destination" id="destinationInput"><br />
+                <input type="text" name="array[]" placeholder="Date" id="dateInput"><br /> 
+                <input type="text" name="array[]" placeholder="Name" id="nameInput"><br />
+                <input type="text" name="array[]" placeholder="Model #" id="modelInput"><br />
+                <input type="text" name="array[]" placeholder="Serial #" id="serialInput"><br />
                 <input type="submit" value="Enter" class="subButton" id="newEntrySubmit">
-            </form>
+            <!-- </form> -->
         </div>
         <div class="tabs__tab" id="tab_5" data-tab-info>
             <h3>Device List</h3>
