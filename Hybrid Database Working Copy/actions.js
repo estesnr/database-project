@@ -16,12 +16,11 @@ tabs.forEach(tab => {
 })
 
 // object constructor for new entries
-function CreateEntry(devType, calStick, destination, date, engName, modelNum, serialNum) {
+function CreateEntry(devType, calStick, destination, date, modelNum, serialNum) {
         this.devType = devType
         this.calStick = calStick
         this.destination = destination
         this.date = date
-        this.engName = engName
         this.serialNum = serialNum
         this.modelNum = modelNum
     }
@@ -33,9 +32,9 @@ function createEntry() {
         document.querySelector('#calStickInput').value,
         document.querySelector('#destinationInput').value,
         document.querySelector('#dateInput').value,
-        document.querySelector('#nameInput').value,
         document.querySelector('#modelInput').value,
         document.querySelector('#serialInput').value
     );
     console.log(newEntry)
 }
+ 

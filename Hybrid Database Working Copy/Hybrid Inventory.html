@@ -31,7 +31,7 @@
             </form>
             <form action="">
                 <input type="text" placeholder="Search"><br />
-                <input type="button" value="Search" class="subButton">
+                <input id='searchButton' type="button" value="Search" class="subButton">
             </form>
   
         </div>
@@ -39,7 +39,6 @@
             <h3>Check-In</h3>
             <form action="">
                 <input type="text" placeholder="Cal Sticker Number"><br />
-                <input type="text" placeholder="Name"><br />
                 <input type="text" placeholder="Date"><br />
                 <input type="submit" value="Enter" class="subButton">
             </form>
@@ -48,7 +47,6 @@
         <div class="tabs__tab" id="tab_3" data-tab-info>
             <h3>Check-Out</h3>
             <input type="text" placeholder="Cal Sticker Number"><br />
-            <input type="text" placeholder="Name"><br />
             <input type="text" placeholder="Destination"><br />
             <input type="text" placeholder="Sign-Out Date"><br />
             <input type="submit" value="Enter" class="subButton">
@@ -66,11 +64,27 @@
                     <option>MultiMeter</option>
                     <option>Power Supply</option>
                     <option>Waveform Generator</option>
+                    <option>Ohmmeter</option>
+                    <option>Power Analyzer</option>
+                    <option>Spectrum Analyzer</option>
+                    <option>Function Generator</option>
+                    <option>EMI Receiver</option>
+                    <option>Accelerometer Simulator</option>
+                    <option>Attenuator</option>
+                    <option>Pressure Gauge</option>
+                    <option>Refractometer</option>
+                    <option>HiPot</option>
+                    <option>Fiber Optic Monitor</option>
+                    <option>Probe Transmitter</option>
+                    <option>Compass</option>
+                    <option>Attenuator</option>
+                    <option>EMI Antenna</option>
+                    <option>Pressure Scanner</option>
+                    <option>LISN</option>
                 </select><br />
                 <input type="text" name="array[]" placeholder="Cal Sticker Number" id="calStickInput"><br />
                 <input type="text" name="array[]" placeholder="Destination" id="destinationInput"><br />
                 <input type="text" name="array[]" placeholder="Date" id="dateInput"><br /> 
-                <input type="text" name="array[]" placeholder="Name" id="nameInput"><br />
                 <input type="text" name="array[]" placeholder="Model #" id="modelInput"><br />
                 <input type="text" name="array[]" placeholder="Serial #" id="serialInput"><br />
                 <input type="submit" value="Enter" class="subButton" id="newEntrySubmit">
