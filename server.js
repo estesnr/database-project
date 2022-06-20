@@ -4,14 +4,11 @@ const app = express();
 const bodyParser = require('body-parser')
 const MongoClient = require('mongodb').MongoClient
 
-MongoClient.connect('mongodb+srv://<username>:<password>@instbase.tmrqqa9.mongodb.net/?retryWrites=true&w=majority', { useUnifiedTopology: true })
+MongoClient.connect('mongodb+srv://Mecharossman:Colphia!1@instbase.tmrqqa9.mongodb.net/?retryWrites=true&w=majority', { useUnifiedTopology: true })
     .then(client => {
         console.log('Connected to Database')
         const db = client.db('instBase')
         const instrumentation = db.collection('instrus')
-
-        
-
 
         app.listen(3000, function() {
             console.log('listening on 3000')
@@ -45,8 +42,26 @@ MongoClient.connect('mongodb+srv://<username>:<password>@instbase.tmrqqa9.mongod
                 })
                 .catch(error => console.error('error'))
         })
-    })
-    .catch(console.error)
 
-     
+        app.put('/update', (req, res) => {
+            instrumentation.findOneAndUpdate(
+                { CalSticker : document.querySelector('#checkInCalStick') },
+                {
+                    $set: {
+                        Loc : 'HomeBase',
+                        Date : document.querySelector('#checkInDate')
+                    }
+                },
+                options
+            )
+            .then(result => {
+                console.log(result)
+            })
+            .catch(error => console.error(error))
+
+        })
+        
+    })
+
+
 

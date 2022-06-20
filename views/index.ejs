@@ -37,7 +37,7 @@
         </div>
         <div class="tabs__tab" id="tab_2" data-tab-info>
             <h3>Check-In</h3>
-            <form action="/update" method="PUT">
+            <form action="/update" method="">
                 <input type="text" placeholder="Cal Sticker Number" id="checkInCalStick"><br />
                 <input type="date" placeholder="Date" id="checkInDate"><br />
                 <input type="submit" value="Enter" class="subButton" id="checkInButton">
@@ -46,10 +46,12 @@
         </div>
         <div class="tabs__tab" id="tab_3" data-tab-info>
             <h3>Check-Out</h3>
+            <form action="/checkOut" method="PUT">
             <input type="text" placeholder="Cal Sticker Number"><br />
             <input type="text" placeholder="Destination"><br />
             <input type="Date" placeholder="Sign-Out Date"><br />
-            <input type="submit" value="Enter" class="subButton">
+            <input type="submit" value="Enter" class="subButton" id="checkOutButton">
+            </form>
   
         </div>
         <div class="tabs__tab" id="tab_4" data-tab-info>
@@ -91,7 +93,6 @@
                 </form>
         </div>
     <script src="actions.js"></script>
-    <script src="/main.js"></script>
 </body>
   
 <footer>

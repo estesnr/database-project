@@ -13,3 +13,25 @@ tabs.forEach(tab => {
         target.classList.add('active');
     })
 })
+
+// function to check in equipment
+
+const checkIn = document.querySelector('#checkInButton').addEventListener('click', checkUpdate)
+
+// checkIn.addEventListener('click', _ => {
+//     fetch('/update', {
+//         method: 'put',
+//         headers: { 'Content-Type' : 'application/json' },
+//         body: JSON.stringify (data)
+
+//     })
+// })
+
+function checkUpdate() {
+    const data = {
+        CalSticker : `${document.querySelector('#checkInCalStick').value}`,
+        Loc : 'HomeBase',
+        Date : document.querySelector('#checkInDate').value
+    }
+    console.log(data)
+}
